@@ -24,29 +24,19 @@ function Conversor() {
     recognition.start()
     recognition.onresult = resultado
   }
-  if (logueado) {
-    return (
-      <>
-        <br />
-        <h3>Convertidor de texto a voz</h3>
-        <input type="text" id="textoAVoz" value={textoAVoz} onChange={cambiarTexto} />
-        <button onClick={convertirTextoAVoz}>Convertir</button>
-
-        <h3>Convertidor de voz a texto</h3>
-        <button onClick={grabarVozATexto}>Grabar</button>
-        <p>{vozATexto}</p>
-      </>
-    );
-  }
 
   return (
-
     <>
-      <input type="text" name="usuario" id="usuario" value={usuario} onChange={cambiarUsuario} />
-      <input type="password" name="clave" id="clave" value={clave} onChange={cambiarClave} />
-      <button onClick={ingresar}>Ingresar</button>
+      <br />
+      <h3>Convertidor de texto a voz</h3>
+      <input type="text" id="textoAVoz" value={textoAVoz} onChange={cambiarTexto} />
+      <button onClick={convertirTextoAVoz}>Convertir</button>
+
+      <h3>Convertidor de voz a texto</h3>
+      <button onClick={grabarVozATexto}>Grabar</button>
+      <p>{vozATexto}</p>
     </>
-  )
+  );
 }
 
-export default conversor
+export default Conversor
