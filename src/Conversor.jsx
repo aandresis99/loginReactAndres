@@ -49,4 +49,4 @@ function Conversor() {
   )
 }
 
-export default conversor
+export default Conversor
