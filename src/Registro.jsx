@@ -15,7 +15,7 @@ function Registro({recargarAhora}) {
   }
 
   async function registrar() {
-    const peticion = await fetch('http://localhost:3011/registro?usuario=' + usuarioRegistro + '&clave=' + claveRegistro, { credentials: 'include' });
+    const peticion = await fetch('https://loginexpress-production-caf7.up.railway.app/registro?usuario=' + usuarioRegistro + '&clave=' + claveRegistro, { credentials: 'include' });
     if (peticion.ok) {
       alert("Usuario Registrado");
       recargarAhora()

@@ -23,7 +23,7 @@ function App() {
   }
 
   async function ingresar() {
-    const peticion = await fetch('http://localhost:3011/login?usuario=' + usuario + '&clave=' + clave, { credentials: 'include' });
+    const peticion = await fetch('https://loginexpress-production-caf7.up.railway.app/login?usuario=' + usuario + '&clave=' + clave, { credentials: 'include' });
     if (peticion.ok) {
       SetLogueado(true);
     } else {
@@ -32,7 +32,7 @@ function App() {
   }
 
   async function validar() {
-    const peticion = await fetch("http://localhost:3011/validar", { credentials: "include" });
+    const peticion = await fetch("https://loginexpress-production-caf7.up.railway.app/validar", { credentials: "include" });
     if (peticion.ok) {
       SetLogueado(true);
     }
